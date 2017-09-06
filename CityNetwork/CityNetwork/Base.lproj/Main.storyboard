@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Picker Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ImagePickerController" customModule="CityNetwork" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zz-pV-dN1">
+                                <rect key="frame" x="160.5" y="225.5" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IS-Nj-7iN">
+                                <rect key="frame" x="163.5" y="272.5" width="48" height="30"/>
+                                <state key="normal" title="Gallery"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLf-Yr-91r">
+                                <rect key="frame" x="170.5" y="318.5" width="34" height="30"/>
+                                <state key="normal" title="Crop"/>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66a-pj-X9g">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fUs-2i-ZlA"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybq-H1-Cvz">
+                                <rect key="frame" x="170.5" y="364.5" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="66a-pj-X9g" secondAttribute="trailing" id="DJe-HT-Udv"/>
+                            <constraint firstItem="3IS-Nj-7iN" firstAttribute="top" secondItem="1zz-pV-dN1" secondAttribute="bottom" constant="17" id="H6z-6l-duK"/>
+                            <constraint firstItem="qLf-Yr-91r" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HiI-8S-gvw"/>
+                            <constraint firstItem="3IS-Nj-7iN" firstAttribute="centerX" secondItem="1zz-pV-dN1" secondAttribute="centerX" id="PQW-tC-M90"/>
+                            <constraint firstAttribute="bottom" secondItem="66a-pj-X9g" secondAttribute="bottom" id="QyF-7e-gdy"/>
+                            <constraint firstItem="qLf-Yr-91r" firstAttribute="centerX" secondItem="3IS-Nj-7iN" secondAttribute="centerX" id="RSu-hk-Tup"/>
+                            <constraint firstItem="ybq-H1-Cvz" firstAttribute="centerX" secondItem="qLf-Yr-91r" secondAttribute="centerX" id="bpl-yw-W0Z"/>
+                            <constraint firstItem="ybq-H1-Cvz" firstAttribute="top" secondItem="qLf-Yr-91r" secondAttribute="bottom" constant="16" id="ctD-Ds-wGl"/>
+                            <constraint firstItem="qLf-Yr-91r" firstAttribute="top" secondItem="3IS-Nj-7iN" secondAttribute="bottom" constant="16" id="n0B-c8-JyM"/>
+                            <constraint firstItem="66a-pj-X9g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wZY-G3-2vJ"/>
+                            <constraint firstItem="1zz-pV-dN1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zeo-WR-APf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="1zz-pV-dN1" id="hPZ-AE-eYH"/>
+                        <outlet property="cropButton" destination="qLf-Yr-91r" id="Xfj-Wa-kY8"/>
+                        <outlet property="galleryButton" destination="3IS-Nj-7iN" id="3le-bl-8CV"/>
+                        <outlet property="saveButton" destination="ybq-H1-Cvz" id="IuL-fN-EjA"/>
+                        <outlet property="selectFilterScrollView" destination="66a-pj-X9g" id="vpY-v2-DcR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="130.88455772113943"/>
+        </scene>
+    </scenes>
+</document>
