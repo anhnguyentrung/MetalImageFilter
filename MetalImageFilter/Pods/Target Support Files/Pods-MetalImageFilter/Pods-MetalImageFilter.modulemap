@@ -1,0 +1,6 @@
+framework module Pods_MetalImageFilter {
+  umbrella header "Pods-MetalImageFilter-umbrella.h"
+
+  export *
+  module * { export * }
+}
